@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    index
+{% endblock %}
+
+{% block main %}
+    <section class="homepage">
+        <div class="buy-sell">
+            <form action="/history" method="post" class="press">
+                <h5>Filter By: </h5>
+                <input class="btn buy" id="buy" name="buy" value="Buy" type="submit">
+                <input class="btn sell" id="buy" name="sell" value="Sell" type="submit">
+                <input class="btn all" id="all" name="all" value="All" type="submit">
+            </form>
+        </div>
+
+
+        <table class="table table-borderless">
+            <thead>
+                <tr class="table-active">
+                    <th scope="col">Transaction ID</th>
+                    <th scope="col">Buy/Sell</th>
+                    <th scope="col">Stock</th>
+                    <th scope="col">Symbol</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price Bought/Sold</th>
+                    <th scope="col">Date and Time Bought</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in rows %}
+                    {% if row["transaction_type"] == "sell" %}
+                        <tr class="table-danger">
+                            <td>{{row["transaction_id"]}}</td>
+                            <td>{{row["transaction_type"]}}</td>
+                            <td>{{row["name"]}}</td>
+                            <td>{{row["symbol"]}}</td>
+                            <td>{{row["quantity"]}}</td>
+                            <td>{{row["price"]}}</td>
+                            <td>{{row["datetime"]}}</td>
+                        </tr>
+                    {% else %}
+                        <tr class="table-info">
+                            <td>{{row["transaction_id"]}}</td>
+                            <td>{{row["transaction_type"]}}</td>
+                            <td>{{row["name"]}}</td>
+                            <td>{{row["symbol"]}}</td>
+                            <td>{{row["quantity"]}}</td>
+                            <td>{{row["price"]}}</td>
+                            <td>{{row["datetime"]}}</td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </section>
+
+{% endblock %}

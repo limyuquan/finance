@@ -1,0 +1,83 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+
+.total_sum {
+    text-align: right;
+    margin-top: 200px;
+}
+
+.total_sum h1{
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.homepage{
+    width:80%;
+    text-align:center;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.buy-sell{
+    text-align:left;
+}
+
+.press{
+    margin-top: 30px;
+    margin-bottom:30px;
+}
+
+.press .btn:hover{
+
+    box-shadow: 0 0 5px 0px rgba(0,0,0,0.4);
+
+}
+
+.press .buy{
+    background-color: lightblue;
+}
+
+.press .sell{
+    background-color: pink;
+}
+
+.password-change{
+    margin-left: 60px;
+}
+
+
+.symbol{
+    width:150px;
+    height: 35px;
+
+}

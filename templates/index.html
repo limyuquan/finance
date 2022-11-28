@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    index
+{% endblock %}
+
+{% block main %}
+    <section class="homepage">
+        <table class="table table-borderless">
+            <thead>
+                <tr class="table-active">
+                    <th scope="col">Stocks</th>
+                    <th scope="col">Stocks Symbol</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Current Price of each Stock</th>
+                    <th scope="col">Total Value of each holding</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for stock in stocks %}
+                    <tr class="table-info">
+                        <td>{{stock["name"]}}</td>
+                        <td>{{stock["symbol"]}}</td>
+                        <td>{{stock["quantity"]}}</td>
+                        <td>{{stock["price"]}}</td>
+                        <td>{{stock["total_price"]}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="total_sum">
+            <h1>Total Funds in Wallet: {{funds}}</h1>
+            <h1>Total Value in Stocks: {{total_sum_stocks}}</h1>
+            <h1>Net Worth: {{total_sum}}</h1>
+
+        </div>
+
+    </section>
+
+{% endblock %}

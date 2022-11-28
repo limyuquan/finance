@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Symbol</th>
+            </tr>
+            <tr>
+                <th>{{ name }}</th>
+                <th>{{ price }}</th>
+                <th>{{ symbol }}</th>
+            </tr>
+        </thead>
+    </table>
+{% endblock %}
